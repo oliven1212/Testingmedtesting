@@ -6,12 +6,12 @@
         {
             Controller controller = new Controller();
 
-            string input = "2*43+500-6";
+            string input = "2*43+500-12/2";
             Console.WriteLine("Received input: {0}", input);
-            
-            
+
+
             string result = controller.Input(input);
-            Console.WriteLine("Result: {0}",result);
+            Console.WriteLine("Result: {0}", result);
         }
     }
 }

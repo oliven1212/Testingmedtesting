@@ -9,11 +9,30 @@ namespace Calculator
     public class Formula
     {
 
-        public string Add(string one, string two) 
+        public double Calc(char currentOperation,string o, string t)
         {
-            string result = "hello";
-
+            double result = 0;
+            switch (currentOperation)
+            {
+                case '+':
+                    result = Convert.ToDouble(o) + Convert.ToDouble(t);
+                    break;
+                case '-':
+                    result = Convert.ToDouble(o) - Convert.ToDouble(t);
+                    break;
+                case '*':
+                    result = Convert.ToDouble(o) * Convert.ToDouble(t);
+                    break;
+                case '/':
+                    result = Convert.ToDouble(o) / Convert.ToDouble(t);
+                    break;
+                default:
+                    break;
+            }
             return result;
         }
+
+
+
     }
 }

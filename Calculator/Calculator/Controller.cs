@@ -8,24 +8,56 @@ namespace Calculator
 {
     public class Controller
     {
+        Formula formula = new Formula();
         public string Input(string input)
         {
-            char[] operations = { '+', '-', '*' };
-            int t=0;
-            string test = " ";
-            for (int i = 0; i < input.Length; i++)
+            char[] operations = { '+', '-', '*', '/' };
+            int requiredOperations = 0;
+            string Result = " ";
+            double tempValue = 0;
+
+            for (int i = 0; i < input.Length; i++) //Goes through the whole input which is the formula the user inserts
             {
-                for (int j = 0; j < operations.Length; j++)
+                for (int j = 0; j < operations.Length; j++)//Goes through all operations
                 {
                     if (input[i] == operations[j])
                     {
-                        t +=1;
-                        test = t.ToString() + " operations found";
-
+                        requiredOperations += 1; //calculates how many operations there is in the input (formula)
+                        Result = requiredOperations.ToString() + " operations found";
                     }
-                }                
+                }
             }
-            return test;
+
+
+            char currentOperation = '+';
+
+
+            char[] operationsLayor1 = { '+', '-' };
+            char[] operationsLayor2 = { '*', '/' };
+
+
+            for (int i = 0; i < input.Length; i++) //Goes through the whole input which is the formula the user inserts
+            {
+                for (int j = 0; j < operationsLayor2.Length; j++)//Goes through * and / operations
+                {
+                    currentOperation = operationsLayor2[j];
+
+                    //INPROGRESS HERE!
+                }
+            }
+
+            for (int i = 0; i < input.Length; i++) //Goes through the whole input which is the formula the user inserts
+            {
+                for (int j = 0; j < operationsLayor1.Length; j++)//Goes through + and -
+                { }
+            }
+
+            tempValue = formula.Calc(currentOperation, "3", "2");
+
+
+
+            Result = tempValue.ToString();
+            return Result;
         }
     }
 }
