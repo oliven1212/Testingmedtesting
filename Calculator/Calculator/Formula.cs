@@ -9,7 +9,7 @@ namespace Calculator
     public class Formula
     {
 
-        public double Calc(char currentOperation,string o, string t)
+        public double Calc(char currentOperation, string o, string t)
         {
             switch (currentOperation)
             {
@@ -25,8 +25,5 @@ namespace Calculator
                     return 0;
             }
         }
-
-
-
     }
 }
