@@ -11,25 +11,19 @@ namespace Calculator
 
         public double Calc(char currentOperation,string o, string t)
         {
-            double result = 0;
             switch (currentOperation)
             {
                 case '+':
-                    result = Convert.ToDouble(o) + Convert.ToDouble(t);
-                    break;
+                    return Convert.ToDouble(o) + Convert.ToDouble(t);
                 case '-':
-                    result = Convert.ToDouble(o) - Convert.ToDouble(t);
-                    break;
+                    return Convert.ToDouble(o) - Convert.ToDouble(t);
                 case '*':
-                    result = Convert.ToDouble(o) * Convert.ToDouble(t);
-                    break;
+                    return Convert.ToDouble(o) * Convert.ToDouble(t);
                 case '/':
-                    result = Convert.ToDouble(o) / Convert.ToDouble(t);
-                    break;
+                    return Convert.ToDouble(o) / Convert.ToDouble(t);
                 default:
-                    break;
+                    return 0;
             }
-            return result;
         }
 
 
